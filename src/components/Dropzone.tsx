@@ -22,6 +22,7 @@ export const Dropzone: React.FC<DropzoneProps> = ({ onFilesAdded }) => {
     accept: {
       'application/x-shockwave-flash': ['.swf'],
     },
+    maxFiles: 5
   });
 
   return (
