@@ -40,7 +40,7 @@ export const Dropzone: React.FC<DropzoneProps> = ({ onFilesAdded }) => {
           ? 'Drop your SWF files here'
           : 'Drag & drop SWF files here, or click to select files'}
       </p>
-      <p className="text-sm text-gray-400 mt-2">Only .swf files are supported</p>
+      <p className="text-sm text-gray-400 mt-2">Apenas arquivos .swf são suportados</p>
     </div>
   );
 }

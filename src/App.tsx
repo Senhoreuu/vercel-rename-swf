@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Dropzone } from './components/Dropzone';
 import { FileList } from './components/FileList';
 import { FileWithNewName } from './types/file';
@@ -33,7 +33,7 @@ function App() {
   const handleSubmit = async () => {
     const invalidFiles = files.filter((file) => !file.newName.trim());
     if (invalidFiles.length > 0) {
-      toast.error('Please provide names for all files');
+        toast.error('Por favor, forneça nomes para todos os arquivos');
       return;
     }
 
@@ -53,7 +53,7 @@ function App() {
       setFiles((prev) =>
         prev.map((file) => ({ ...file, status: 'success' as const }))
       );
-      toast.success('Files renamed successfully!', {
+      toast.success('Arquivos renomeados com sucesso!', {
         style: {
           background: '#2c2e33',
           color: '#fff',
@@ -67,7 +67,7 @@ function App() {
           errorMessage: 'Failed to rename file',
         }))
       );
-      toast.error('Failed to rename files', {
+      toast.error('Falha ao renomear arquivos', {
         style: {
           background: '#2c2e33',
           color: '#fff',
@@ -80,9 +80,9 @@ function App() {
     <div className="min-h-screen bg-dark-100">
       <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-100">SWF File Renamer</h1>
+          <h1 className="text-3xl font-bold text-gray-100">Renomeador de Arquivos SWF</h1>
           <p className="mt-2 text-gray-400">
-            Upload your SWF files and rename them easily
+            Dê um nome aos seus arquivos SWF e faça o upload facilmente
           </p>
         </div>
 
@@ -103,7 +103,7 @@ function App() {
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <ArrowUpCircle className="w-5 h-5 mr-2" />
-                Rename Files
+                Renomear Arquivos
               </button>
             </div>
           </div>
